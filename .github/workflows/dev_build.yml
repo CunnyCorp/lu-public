@@ -10,6 +10,8 @@ jobs:
                 with:
                     java-version: 21
                     distribution: adopt
+            -   name: Permission
+                run: chmod +x ./gradlew
             -   name: Build
                 run: ./gradlew build
             -   name: Release
