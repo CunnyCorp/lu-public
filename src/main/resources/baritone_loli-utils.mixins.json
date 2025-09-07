@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "package": "pictures.cunny.loli_utils.mixin.baritone",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "GotoCommandMixin"
+  ]
+}

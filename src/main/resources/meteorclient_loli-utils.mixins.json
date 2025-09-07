@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "pictures.cunny.loli_utils.mixin.meteorclient",
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "BetterTabMixin",
+    "CapesMixin",
+    "DefaultSettingsWidgetFactoryMixin",
+    "ItemHighlightMixin",
+    "NukerMixin",
+    "PlayerUtilsMixin",
+    "SettingsWidgetFactoryAccessor",
+    "SystemsMixin"
+  ]
+}

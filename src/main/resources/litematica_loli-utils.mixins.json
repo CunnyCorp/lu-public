@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "package": "pictures.cunny.loli_utils.mixin.litematica",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "SchematicPlacementManagerMixin"
+  ]
+}

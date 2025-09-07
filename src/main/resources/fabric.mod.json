@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "loli-utils",
+  "version": "${version}",
+  "name": "Loli Utils",
+  "description": "${description}",
+  "authors": [
+    "loli-tummy"
+  ],
+  "contact": {
+    "email": "",
+    "repo": "https://github.com/loli-tummy/loli-utils"
+  },
+  "icon": "assets/loli-utils/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "pictures.cunny.loli_utils.LoliUtilsMeteor"
+    ]
+  },
+  "mixins": [
+    "loli-utils.mixins.json",
+    "baritone_loli-utils.mixins.json",
+    "litematica_loli-utils.mixins.json",
+    "meteorclient_loli-utils.mixins.json"
+  ],
+  "accessWidener": "loli-utils.accesswidener",
+  "custom": {
+    "meteor-client:color": "147,244,249"
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": "${mc_version}",
+    "meteor-client": "*"
+  }
+}

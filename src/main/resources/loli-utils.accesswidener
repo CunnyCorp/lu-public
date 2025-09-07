@@ -1,0 +1,43 @@
+accessWidener	v1	named
+
+accessible field net/minecraft/network/Connection channel Lio/netty/channel/Channel;
+
+accessible method net/minecraft/server/network/ServerGamePacketListenerImpl isChatMessageIllegal (Ljava/lang/String;)Z
+
+accessible method net/minecraft/resources/ResourceLocation <init> (Ljava/lang/String;Ljava/lang/String;)V
+
+accessible field net/minecraft/world/level/chunk/LevelChunkSection nonEmptyBlockCount S
+
+accessible field net/minecraft/world/level/BaseSpawner spawnDelay I
+
+accessible field net/minecraft/world/phys/Vec3 y D
+
+accessible field net/minecraft/client/Options modelParts Ljava/util/Set;
+
+accessible method net/minecraft/client/Minecraft startAttack ()Z
+
+accessible class net/minecraft/world/inventory/ArmorSlot
+
+accessible method net/minecraft/client/Minecraft continueAttack (Z)V
+
+accessible method net/minecraft/client/player/LocalPlayer sendPosition ()V
+accessible method net/minecraft/client/player/LocalPlayer sendIsSprintingIfNeeded ()V
+accessible field net/minecraft/client/player/LocalPlayer lastSentInput Lnet/minecraft/world/entity/player/Input;
+accessible field net/minecraft/client/player/LocalPlayer wasSprinting Z
+
+accessible field net/minecraft/client/player/AbstractClientPlayer deltaMovementOnPreviousTick Lnet/minecraft/world/phys/Vec3;
+
+accessible field net/minecraft/world/entity/LivingEntity noJumpDelay I
+
+accessible field net/minecraft/network/protocol/game/ServerboundInteractPacket action Lnet/minecraft/network/protocol/game/ServerboundInteractPacket$Action;
+accessible field net/minecraft/network/protocol/game/ServerboundInteractPacket entityId I
+accessible method net/minecraft/network/protocol/game/ServerboundInteractPacket$Action getType ()Lnet/minecraft/network/protocol/game/ServerboundInteractPacket$ActionType;
+accessible class net/minecraft/network/protocol/game/ServerboundInteractPacket$Action
+accessible class net/minecraft/network/protocol/game/ServerboundInteractPacket$ActionType
+
+accessible field net/minecraft/network/protocol/game/ClientboundMoveEntityPacket entityId I
+
+accessible field net/minecraft/world/entity/player/Inventory equipment Lnet/minecraft/world/entity/EntityEquipment;
+
+accessible field net/minecraft/client/multiplayer/MultiPlayerGameMode destroyDelay I
+accessible field net/minecraft/client/multiplayer/MultiPlayerGameMode destroyProgress F

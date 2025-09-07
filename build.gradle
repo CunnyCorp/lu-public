@@ -1,0 +1,87 @@
+plugins {
+    id "fabric-loom" version "1.10.1"
+}
+
+version = project.mod_version
+group = project.maven_group
+description = "Meteor Add-on designed for friends of CC."
+
+configurations {
+    implementation.extendsFrom(api)
+    shadow.extendsFrom(api)
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+
+    maven {
+        name = "Meteor Dev Releases"
+        url = "https://maven.meteordev.org/releases"
+    }
+
+    maven {
+        name = "Meteor Dev Snapshots"
+        url = "https://maven.meteordev.org/snapshots"
+    }
+
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+
+    // Fabric
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    // Meteor
+    modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+    //modImplementation "meteordevelopment:baritone:${project.minecraft_version}-SNAPSHOT"
+    modImplementation files("./libs/baritone-api-fabric-1.21.8-SNAPSHOT.jar")
+
+    // Xaeros
+    //modImplementation "maven.modrinth:xaeros-world-map:${project.xaeros_world_map_version}-fabric,${project.minecraft_version}"
+    //modImplementation "maven.modrinth:xaeros-minimap:${project.xaeros_minimap_version}-fabric,${project.minecraft_version}"
+
+    // Litematica
+    modImplementation "maven.modrinth:litematica:${project.litematica_version}-fabric,${project.minecraft_version}"
+    modImplementation "maven.modrinth:malilib:${project.malilib_version}-fabric,${project.minecraft_version}"
+
+    // ViaFabricPlus
+    //modImplementation "maven.modrinth:viafabricplus:${project.viafabricplus_version}-fabric,${project.minecraft_version}"
+
+    // For whatever reason we'd still want to use jars for litematica
+    //modImplementation files("./libs/${project.litematica_file_name}.jar")
+    //modImplementation files("./libs/${project.malilib_file_name}.jar")
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/loli-utils.accesswidener")
+}
+
+
+
+processResources {
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+            "mc_version": project.minecraft_version,
+            "description": project.description
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding("UTF-8")
+}
+
+java {
+    def javaVersion = JavaVersion.toVersion(21)
+
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(21)
+    }
+
+    archivesBaseName = project.archives_base_name
+}

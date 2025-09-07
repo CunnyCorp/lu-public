@@ -1,0 +1,31 @@
+{
+  "required": false,
+  "package": "pictures.cunny.loli_utils.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ChatComponentMixin",
+    "ClientCommonPacketListenerImplMixin",
+    "ClientPacketListenerMixin",
+    "ClientPlayerInteractionManagerMixin",
+    "EditBoxMixin",
+    "KeyboardInputMixin",
+    "LocalPlayerMixin",
+    "MinecraftMixin",
+    "MultiPlayerGameModeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "CompoundTagMixin",
+    "ConnectionMixin",
+    "EntityMixin",
+    "FireworkRocketEntityAccessor",
+    "MinecraftClientALMixin",
+    "ResourceLocationMixin",
+    "StringUtilMixin",
+    "Utf8StringMixin",
+    "WrittenBookContentMixin",
+    "YggdrasilUserApiServiceMixin"
+  ]
+}
