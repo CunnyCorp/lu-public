@@ -2,7 +2,6 @@
 
 A Meteor Client addon that adds various modules for more strict anti-cheats.
 
-749 is available in libs/ but doesn't include source code and won't be constantly updated unless the core functionality does.
 
 ### Notable Features
 
