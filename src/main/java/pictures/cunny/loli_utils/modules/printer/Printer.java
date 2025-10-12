@@ -660,8 +660,8 @@ public class Printer extends LoliModule {
                     new IntSetting.Builder()
                             .name("anchor-break-limit")
                             .description(".")
-                            .defaultValue(5)
-                            .sliderRange(1, 256)
+                            .defaultValue(32)
+                            .sliderRange(1, 1024)
                             .build());
     public final Setting<Integer> placingLimit =
             sgDebug.add(
