@@ -10,8 +10,7 @@
     "EditBoxMixin",
     "KeyboardInputMixin",
     "LocalPlayerMixin",
-    "MinecraftMixin",
-    "MultiPlayerGameModeMixin"
+    "MinecraftMixin"
   ],
   "injectors": {
     "defaultRequire": 1
