@@ -181,7 +181,7 @@ public class AdvancedMove extends DefaultMove {
         mc.options.keyUp.setDown(moveForward);
         mc.options.keyDown.setDown(moveBack);
         mc.player.setSprinting(sprinting);
-        mc.options.keyJump.setDown(jump);
+        if (PrinterUtils.PRINTER.allowJumping.get()) mc.options.keyJump.setDown(jump);
         mc.player.setYRot(yaw);
         mc.player.setXRot(pitch);
     }

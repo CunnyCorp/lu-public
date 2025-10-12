@@ -274,6 +274,14 @@ public class Printer extends LoliModule {
                             .visible(() -> anchorMove.get() == AnchorMovement.Vanilla)
                             .defaultValue(true)
                             .build());
+    public final Setting<Boolean> allowJumping =
+            sgAnchor.add(
+                    new BoolSetting.Builder()
+                            .name("allow-jumping")
+                            .description("Bar Bar Bar")
+                            .visible(() -> anchorMove.get() == AnchorMovement.Vanilla)
+                            .defaultValue(true)
+                            .build());
     public final Setting<Integer> backHoldTime =
             sgAnchor.add(
                     new IntSetting.Builder()
