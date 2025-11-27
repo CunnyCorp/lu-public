@@ -365,8 +365,8 @@ public class AutoWither extends Module {
 
             swapCooldown = swapDelay.get();
             if (!foundItem.isHotbar()) {
-                InventoryUtils.swapToHotbar(foundItem.slot(), mc.player.getInventory().getSelectedSlot());
-            } else if (mc.player.getInventory().getSelectedSlot() != foundItem.slot()) {
+                InventoryUtils.swapToHotbar(foundItem.slot(), mc.player.getInventory().selected);
+            } else if (mc.player.getInventory().selected != foundItem.slot()) {
                 InventoryUtils.swapSlot(foundItem.slot());
             }
             return true;

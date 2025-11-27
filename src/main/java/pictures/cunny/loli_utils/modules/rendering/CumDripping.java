@@ -383,7 +383,7 @@ public class CumDripping extends LoliModule {
                 Vec3 p21 = getSpherePoint(center, size, phi2, theta1);
                 Vec3 p22 = getSpherePoint(center, size, phi2, theta2);
 
-                event.renderer.triangles.ensureQuadCapacity();
+                event.renderer.triangles.growIfNeeded();
                 event.renderer.triangles.quad(
                         event.renderer.triangles.vec3(p11.x, p11.y, p11.z).color(color).next(),
                         event.renderer.triangles.vec3(p12.x, p12.y, p12.z).color(color).next(),
@@ -455,7 +455,7 @@ public class CumDripping extends LoliModule {
             Vec3 e2 = end.add(perpendicular.scale(endRadius * Math.cos(angle2)))
                     .add(perpendicular2.scale(endRadius * Math.sin(angle2)));
 
-            event.renderer.triangles.ensureQuadCapacity();
+            event.renderer.triangles.growIfNeeded();
             event.renderer.triangles.quad(
                     event.renderer.triangles.vec3(s1.x, s1.y, s1.z).color(color).next(),
                     event.renderer.triangles.vec3(s2.x, s2.y, s2.z).color(color).next(),

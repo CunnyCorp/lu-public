@@ -375,7 +375,7 @@ public class ReachIndicator extends LoliModule {
                 Vec3 v4 = getSpherePoint(center, radius, theta2, phi1);
 
                 // Render the quad
-                event.renderer.triangles.ensureQuadCapacity();
+                event.renderer.triangles.growIfNeeded();
                 event.renderer.triangles.quad(
                         event.renderer.triangles.vec3(v1.x, v1.y, v1.z).color(transparentColor).next(),
                         event.renderer.triangles.vec3(v2.x, v2.y, v2.z).color(transparentColor).next(),
@@ -465,7 +465,7 @@ public class ReachIndicator extends LoliModule {
 
         // Render hitbox as a transparent quad
         Color hitboxColor = new Color(color.r, color.g, color.b, color.a / 2);
-        event.renderer.triangles.ensureQuadCapacity();
+        event.renderer.triangles.growIfNeeded();
         event.renderer.triangles.quad(
                 event.renderer.triangles.vec3(bottomLeft.x, bottomLeft.y, bottomLeft.z).color(hitboxColor).next(),
                 event.renderer.triangles.vec3(bottomRight.x, bottomRight.y, bottomRight.z).color(hitboxColor).next(),
@@ -497,7 +497,7 @@ public class ReachIndicator extends LoliModule {
             Color energyColor = new Color(color.r, color.g, color.b, alpha);
 
             // Render energy tendril as
-            event.renderer.triangles.ensureQuadCapacity();
+            event.renderer.triangles.growIfNeeded();
             event.renderer.triangles.quad(
                     event.renderer.triangles.vec3(inner1.x, inner1.y, inner1.z).color(energyColor).next(),
                     event.renderer.triangles.vec3(inner2.x, inner2.y, inner2.z).color(energyColor).next(),
@@ -609,7 +609,7 @@ public class ReachIndicator extends LoliModule {
             Color segmentColor = new Color(color.r, color.g, color.b, alpha);
 
             // Render ribbon segment as quad
-            event.renderer.triangles.ensureQuadCapacity();
+            event.renderer.triangles.growIfNeeded();
             event.renderer.triangles.quad(
                     event.renderer.triangles.vec3(segStart.x + offset1.x, segStart.y + offset1.y, segStart.z + offset1.z).color(segmentColor).next(),
                     event.renderer.triangles.vec3(segStart.x - offset1.x, segStart.y - offset1.y, segStart.z - offset1.z).color(segmentColor).next(),
@@ -620,7 +620,7 @@ public class ReachIndicator extends LoliModule {
     }
 
     private void renderTracerQuad(Render3DEvent event, Vec3 v1, Vec3 v2, Vec3 v3, Vec3 v4, Color color) {
-        event.renderer.triangles.ensureQuadCapacity();
+        event.renderer.triangles.growIfNeeded();
         event.renderer.triangles.quad(
                 event.renderer.triangles.vec3(v1.x, v1.y, v1.z).color(color).next(),
                 event.renderer.triangles.vec3(v2.x, v2.y, v2.z).color(color).next(),
@@ -660,7 +660,7 @@ public class ReachIndicator extends LoliModule {
             Vec3 inner2 = getSpherePoint(center, radius * 0.9, Math.PI / 2, angle2);
             Vec3 outer2 = getSpherePoint(center, radius * 1.1, Math.PI / 2, angle2);
 
-            event.renderer.triangles.ensureQuadCapacity();
+            event.renderer.triangles.growIfNeeded();
             event.renderer.triangles.quad(
                     event.renderer.triangles.vec3(inner.x, inner.y, inner.z).color(color).next(),
                     event.renderer.triangles.vec3(inner2.x, inner2.y, inner2.z).color(color).next(),

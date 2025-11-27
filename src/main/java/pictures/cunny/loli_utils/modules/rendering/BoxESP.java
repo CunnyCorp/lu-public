@@ -878,7 +878,7 @@ public class BoxESP extends LoliModule {
         double y2 = y + height;
         double z2 = z + width;
 
-        event.renderer.triangles.ensureCapacity(4 * 6, 6 * 6);
+        event.renderer.triangles.growIfNeeded();
 
         event.renderer.triangles.quad(
                 event.renderer.triangles.vec3(x, y, z).color(color).next(),
@@ -1222,7 +1222,7 @@ public class BoxESP extends LoliModule {
                 }
 
 
-                event.renderer.triangles.ensureQuadCapacity();
+                event.renderer.triangles.growIfNeeded();
                 event.renderer.triangles.quad(
                         event.renderer.triangles.vec3(sx1, sy1, sz1).color(quadColor).next(),
                         event.renderer.triangles.vec3(sx2, sy2, sz2).color(quadColor).next(),
@@ -1284,7 +1284,7 @@ public class BoxESP extends LoliModule {
         }
 
         // Render the edge quad
-        event.renderer.triangles.ensureQuadCapacity();
+        event.renderer.triangles.growIfNeeded();
         event.renderer.triangles.quad(
                 event.renderer.triangles.vec3(x1 - perpX, y1 - perpY, z1 - perpZ).color(color).next(),
                 event.renderer.triangles.vec3(x2 - perpX, y2 - perpY, z2 - perpZ).color(color).next(),

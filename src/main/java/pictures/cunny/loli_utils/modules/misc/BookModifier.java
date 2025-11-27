@@ -190,15 +190,15 @@ public class BookModifier extends Module {
         }
 
         assert mc.player != null;
-        InventoryUtils.swapToHotbar(itemResult.slot(), mc.player.getInventory().getSelectedSlot());
-        writeBook(mc.player.getInventory().getSelectedSlot());
+        InventoryUtils.swapToHotbar(itemResult.slot(), mc.player.getInventory().selected);
+        writeBook(mc.player.getInventory().selected);
     }
 
     public void writeHeldBook() {
         assert mc.player != null;
         if (mc.player.getMainHandItem().getItem() == Items.WRITABLE_BOOK) {
             assert mc.player != null;
-            writeBook(mc.player.getInventory().getSelectedSlot());
+            writeBook(mc.player.getInventory().selected);
         } else if (mc.player.getOffhandItem().getItem() == Items.WRITABLE_BOOK) {
             writeBook(40);
         }

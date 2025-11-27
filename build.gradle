@@ -40,7 +40,7 @@ dependencies {
     // Meteor
     modImplementation "meteordevelopment:meteor-client:${project.minecraft_version}-SNAPSHOT"
     modImplementation "meteordevelopment:baritone:${project.minecraft_version}-SNAPSHOT"
-    //modImplementation files("./libs/baritone-api-fabric-1.21.8-SNAPSHOT.jar")
+    //modImplementation files("./libs/baritone-api-fabric-1.21.4-SNAPSHOT.jar")
 
     // Xaeros
     //modImplementation "maven.modrinth:xaeros-world-map:${project.xaeros_world_map_version}-fabric,${project.minecraft_version}"

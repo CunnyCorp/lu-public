@@ -833,7 +833,7 @@ public class PenisEsp extends LoliModule {
                         + perpendicular2.z * Math.sin(angle2) * tipRadius;
 
                 // Render side quad
-                event.renderer.triangles.ensureQuadCapacity();
+                event.renderer.triangles.growIfNeeded();
                 event.renderer.triangles.quad(
                         event.renderer.triangles.vec3(baseX1, baseY1, baseZ1).color(color).next(),
                         event.renderer.triangles.vec3(baseX2, baseY2, baseZ2).color(color).next(),
@@ -939,7 +939,7 @@ public class PenisEsp extends LoliModule {
                         + perpendicular2.z * Math.sin(angle2) * tipRadius;
 
                 // Render side quad
-                event.renderer.triangles.ensureQuadCapacity();
+                event.renderer.triangles.growIfNeeded();
                 event.renderer.triangles.quad(
                         event.renderer.triangles.vec3(baseX1, baseY1, baseZ1).color(color).next(),
                         event.renderer.triangles.vec3(baseX2, baseY2, baseZ2).color(color).next(),
@@ -948,7 +948,7 @@ public class PenisEsp extends LoliModule {
                 );
 
                 // Render tip cap
-                event.renderer.triangles.ensureTriCapacity();
+                event.renderer.triangles.growIfNeeded();
                 event.renderer.triangles.triangle(
                         event.renderer.triangles.vec3(tipX1, tipY1, tipZ1).color(color).next(),
                         event.renderer.triangles.vec3(tipX2, tipY2, tipZ2).color(color).next(),
@@ -1036,7 +1036,7 @@ public class PenisEsp extends LoliModule {
                     double z4 = z + radius * Math.sin(phi2) * Math.sin(theta1);
 
                     // Render the quad
-                    event.renderer.triangles.ensureQuadCapacity();
+                    event.renderer.triangles.growIfNeeded();
                     event.renderer.triangles.quad(
                             event.renderer.triangles.vec3(x1, y1, z1).color(color).next(),
                             event.renderer.triangles.vec3(x2, y2, z2).color(color).next(),

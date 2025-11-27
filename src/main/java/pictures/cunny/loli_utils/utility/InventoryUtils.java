@@ -26,7 +26,7 @@ public class InventoryUtils {
      */
     public static void swapSlot(int i) {
         assert mc.player != null;
-        mc.player.getInventory().setSelectedSlot(i);
+        mc.player.getInventory().selected = i;
         mc.player.connection.send(new ServerboundSetCarriedItemPacket(i));
     }
 

@@ -356,7 +356,7 @@ public class StashMover extends Module {
 
                 if (findSingle != -1) {
                     splitSlot = -1;
-                    InventoryUtils.swapToHotbar(findSingle, mc.player.getInventory().getSelectedSlot());
+                    InventoryUtils.swapToHotbar(findSingle, mc.player.getInventory().selected);
                 } else {
                     splitSlot = InventoryUtils.findMatchingSlot((stack, slot) -> stack.getItem() == Items.ENDER_PEARL);
 
@@ -409,7 +409,7 @@ public class StashMover extends Module {
 
             case 80 -> {
                 if (splitSlot != -1) {
-                    InventoryUtils.swapToHotbar(placedSlot, mc.player.getInventory().getSelectedSlot());
+                    InventoryUtils.swapToHotbar(placedSlot, mc.player.getInventory().selected);
                 }
 
                 idleTimer += 3;

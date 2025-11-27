@@ -182,7 +182,7 @@ public class ItemHighlightMixin {
             CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
 
             if (customData != null) {
-                for (String key : customData.copyTag().keySet()) {
+                for (String key : customData.copyTag().getAllKeys()) {
                     if (customData.contains(key) && !filterCustomData.get().contains(key)) {
                         return true;
                     }

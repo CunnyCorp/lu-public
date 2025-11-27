@@ -37,7 +37,5 @@ accessible class net/minecraft/network/protocol/game/ServerboundInteractPacket$A
 
 accessible field net/minecraft/network/protocol/game/ClientboundMoveEntityPacket entityId I
 
-accessible field net/minecraft/world/entity/player/Inventory equipment Lnet/minecraft/world/entity/EntityEquipment;
-
 accessible field net/minecraft/client/multiplayer/MultiPlayerGameMode destroyDelay I
 accessible field net/minecraft/client/multiplayer/MultiPlayerGameMode destroyProgress F

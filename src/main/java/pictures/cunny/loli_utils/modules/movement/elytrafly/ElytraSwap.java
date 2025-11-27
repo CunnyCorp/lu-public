@@ -62,7 +62,7 @@ public class ElytraSwap extends Module {
             return;
         }
 
-        ItemStack chestStack = mc.player.getInventory().equipment.get(EquipmentSlot.CHEST);
+        ItemStack chestStack = mc.player.getInventory().getArmor(2);
 
         if (chestStack.getItem() == Items.ELYTRA
                 && chestStack.getMaxDamage() - chestStack.getDamageValue() <= durabilitySwap.get()) {
@@ -96,7 +96,7 @@ public class ElytraSwap extends Module {
                     break;
                 }
 
-                InventoryUtils.swapToHotbar(result.slot(), mc.player.getInventory().getSelectedSlot());
+                InventoryUtils.swapToHotbar(result.slot(), mc.player.getInventory().selected);
                 break;
             case 8:
                 mc.gameMode.useItem(

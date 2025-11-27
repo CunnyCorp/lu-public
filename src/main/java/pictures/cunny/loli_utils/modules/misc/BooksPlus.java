@@ -185,7 +185,7 @@ public class BooksPlus extends Module {
                     break;
                 }
 
-                InventoryUtils.swapToHotbar(result.slot(), mc.player.getInventory().getSelectedSlot());
+                InventoryUtils.swapToHotbar(result.slot(), mc.player.getInventory().selected);
                 break;
             case 25:
                 assert false;
@@ -209,7 +209,7 @@ public class BooksPlus extends Module {
                 }
                 ServerboundEditBookPacket packet1 =
                         new ServerboundEditBookPacket(
-                                mc.player.getInventory().getSelectedSlot(), pages, Optional.of(titleText));
+                                mc.player.getInventory().selected, pages, Optional.of(titleText));
                 PacketUtils.send(packet1);
                 break;
             case 45:

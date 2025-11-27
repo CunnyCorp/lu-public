@@ -745,7 +745,7 @@ public class Scaffold extends LoliModule {
             return false;
         }
 
-        if (mc.player.getInventory().getSelectedSlot() != item.slot()) {
+        if (mc.player.getInventory().selected != item.slot()) {
             InventoryUtils.swapSlot(item.slot());
             delayTimer = 1;
             return false;

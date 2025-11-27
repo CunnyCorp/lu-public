@@ -804,7 +804,7 @@ public class Printer extends LoliModule {
         containedColors.clear();
         containedBlocks.clear();
 
-        for (ItemStack stack : mc.player.getInventory().getNonEquipmentItems()) {
+        for (ItemStack stack : mc.player.getInventory().items) {
             if (InventoryUtils.IS_BLOCK.test(stack)) {
                 if (strictNoColor.get()) {
                     containedBlocks.add(stack.getItem());

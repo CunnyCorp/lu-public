@@ -396,7 +396,7 @@ public class BlockUtils {
             }
 
             PacketUtils.send(new ServerboundSetCarriedItemPacket(itemResult.slot()));
-            //mc.player.getInventory().setSelectedSlot(itemResult.slot());
+            //mc.player.getInventory().selected = itemResult.slot();
 
             PacketUtils.send(new ServerboundSwingPacket(InteractionHand.MAIN_HAND));
             PacketUtils.send(new ServerboundUseItemOnPacket(InteractionHand.MAIN_HAND, getSafeHitResult(pos), 0));

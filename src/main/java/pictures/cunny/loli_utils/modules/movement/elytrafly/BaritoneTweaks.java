@@ -68,7 +68,7 @@ public class BaritoneTweaks extends Module {
                                 itemStack.getItem() == Items.ELYTRA
                                         && itemStack.getMaxDamage() - itemStack.getDamageValue() > minDurability);
         ItemStack chestStack =
-                Objects.requireNonNull(MeteorClient.mc.player).getInventory().equipment.get(EquipmentSlot.CHEST);
+                Objects.requireNonNull(MeteorClient.mc.player).getInventory().getArmor(2);
         return result.found() || chestStack.getMaxDamage() - chestStack.getDamageValue() <= minDurability;
     }
 

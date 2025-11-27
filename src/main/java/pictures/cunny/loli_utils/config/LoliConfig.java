@@ -28,11 +28,11 @@ public class LoliConfig extends System<LoliConfig> {
 
     @Override
     public LoliConfig fromTag(CompoundTag tag) {
-        if (tag.getCompound("playerEffects").isPresent()) {
-            CompoundTag playerEffectsTag = tag.getCompoundOrEmpty("playerEffects");
-            for (String name : playerEffectsTag.keySet()) {
-                CompoundTag playerTag = playerEffectsTag.getCompoundOrEmpty(name);
-                playerEffects.put(name, new PlayerEffects(new Color().fromTag(playerTag.getCompoundOrEmpty("color")), playerTag.getBoolean("bold").get(), playerTag.getBoolean("underline").get(), playerTag.getBoolean("italic").get()));
+        if (tag.contains("playerEffects", CompoundTag.TAG_COMPOUND)) {
+            CompoundTag playerEffectsTag = tag.getCompound("playerEffects");
+            for (String name : playerEffectsTag.getAllKeys()) {
+                CompoundTag playerTag = playerEffectsTag.getCompound(name);
+                playerEffects.put(name, new PlayerEffects(new Color().fromTag(playerTag.getCompound("color")), playerTag.getBoolean("bold"), playerTag.getBoolean("underline"), playerTag.getBoolean("italic")));
 
             }
         }
