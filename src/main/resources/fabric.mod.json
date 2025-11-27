@@ -5,11 +5,11 @@
   "name": "Loli Utils",
   "description": "${description}",
   "authors": [
-    "loli-tummy"
+    "CunnyCorp"
   ],
   "contact": {
     "email": "",
-    "repo": "https://github.com/loli-tummy/loli-utils"
+    "repo": "https://github.com/CunnyCorp/lu-public"
   },
   "icon": "assets/loli-utils/icon.png",
   "environment": "client",
